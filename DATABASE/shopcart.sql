@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 23, 2019 lúc 02:59 PM
+-- Thời gian đã tạo: Th12 08, 2019 lúc 12:47 PM
 -- Phiên bản máy phục vụ: 8.0.15
 -- Phiên bản PHP: 7.2.10
 
@@ -34,20 +34,21 @@ CREATE TABLE `giay` (
   `GiaAo` int(11) NOT NULL,
   `GiaThuc` int(11) NOT NULL,
   `ProductDetails` varchar(1000) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `anhDemo` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+  `anhDemo` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `SL` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `giay`
 --
 
-INSERT INTO `giay` (`IDGiay`, `TenGiay`, `GiaAo`, `GiaThuc`, `ProductDetails`, `anhDemo`) VALUES
-(1, 'GIÀY BÓNG ĐÁ X 19.1 FIRM GROUND', 1000, 500, 'X không đơn thuần là một đôi giày. Đây là lời khẳng định rằng tốc độ sẽ chọc thủng hàng phòng ngự đối phương, thay vì đi vào ngõ cụt. ', 'F35316_02_standard.jpg'),
-(2, 'PUSHA T OZWEEGO', 250, 130, 'Pusha T came from the street to claim his status as a global name. A collaboration with the hip hop artist, these Pusha T Ozweego shoes take late-\'90s and early-\'00s running style in a new direction. They feature a textile and suede upper and a rubber outsole.', 'EE7000_01_standard.jpg'),
-(3, 'GIÀY PHARRELL WILLIAMS CRAZY BYW LVL X', 1200, 600, 'Được đi bởi các cầu thủ bóng rổ huyền thoại, mẫu giày của những năm 90 này nổi bật với phong cách khác lạ đến nỗi được gọi với cái tên Crazy. Mẫu giày Crazy BYW này kế nhiệm phong cách đó bằng cách kết hợp nét cổ điển với lớp đệm cải tiến. Phiên bản giày Pharrell Williams Hu này có thân giày trên bằng vải dệt và các hạt đệm Boost trong đế giữa mang đến khả năng chuyển hồi năng lượng và cảm giác thoải mái. Bên trong là miếng lót giày mang chữ ký Pharrell lấy cảm hứng từ nghệ thuật bấm huyệt cổ đại.', 'EF3500_01_standard.jpg'),
-(4, 'GIÀY SOBAKOV 2.0', 700, 350, 'Mẫu giày Sobakov tôn vinh tinh thần bóng đá hiện đại. Mẫu giày bằng vải dệt kim co giãn này có phần dây buộc thiết kế bất đối xứng và đế giữa cao su được chạm khắc cỡ lớn. Để gìn giữ di sản bóng đá của adidas, mẫu giày có những điểm nhấn họa tiết thêu và 3 Sọc đổi hướng phản quang phỏng theo những chi tiết trên đôi Predator Accelerator \'98 huyền thoại.', 'D98155_01_standard.jpg'),
-(5, 'GIÀY HUMAN WILLIAMS HU NMD', 1100, 550, 'Thông qua sự kết hợp màu sắc rực rỡ với từ ngữ thể hiện niềm hy vọng và sự bao dung, nhạc sĩ kiêm nhà thiết kế Pharrell Williams muốn tôn vinh những sắc màu nhân văn. Mẫu giày này làm mới phong cách NMD nổi tiếng bằng hình trái tim có chữ \"Human Made\" thêu trên thân giày bằng vải dệt. Đệm đỡ Boost chuyển hồi năng lượng bất tận và tạo sự thoải mái trên mỗi sải bước.', 'EF7223_01_standard.jpg'),
-(6, 'GIÀY CAO SU LƯU HÓA CONTINENTAL', 200, 100, 'Lấy cảm hứng từ mẫu giày tập trong nhà vào đầu thập niên 80, Continental 80 mang đến kiểu dáng mới mẻ với phong cách cổ điển. Thân giày trên bằng vải canvas và da khoe ô đặt logo theo phong cách cổ điển ngay cạnh dây giày. Đế giày bằng cao su lưu hóa cho cảm giác cực kỳ vững chân.', 'FV2701_01_standard.jpg');
+INSERT INTO `giay` (`IDGiay`, `TenGiay`, `GiaAo`, `GiaThuc`, `ProductDetails`, `anhDemo`, `SL`) VALUES
+(1, 'GIÀY BÓNG ĐÁ X 19.1 FIRM GROUND', 1000, 500, 'X không đơn thuần là một đôi giày. Đây là lời khẳng định rằng tốc độ sẽ chọc thủng hàng phòng ngự đối phương, thay vì đi vào ngõ cụt. ', 'F35316_02_standard.jpg', 3),
+(2, 'PUSHA T OZWEEGO', 250, 130, 'Pusha T came from the street to claim his status as a global name. A collaboration with the hip hop artist, these Pusha T Ozweego shoes take late-\'90s and early-\'00s running style in a new direction. They feature a textile and suede upper and a rubber outsole.', 'EE7000_01_standard.jpg', 2),
+(3, 'GIÀY PHARRELL WILLIAMS CRAZY BYW LVL X', 1200, 600, 'Được đi bởi các cầu thủ bóng rổ huyền thoại, mẫu giày của những năm 90 này nổi bật với phong cách khác lạ đến nỗi được gọi với cái tên Crazy. Mẫu giày Crazy BYW này kế nhiệm phong cách đó bằng cách kết hợp nét cổ điển với lớp đệm cải tiến. Phiên bản giày Pharrell Williams Hu này có thân giày trên bằng vải dệt và các hạt đệm Boost trong đế giữa mang đến khả năng chuyển hồi năng lượng và cảm giác thoải mái. Bên trong là miếng lót giày mang chữ ký Pharrell lấy cảm hứng từ nghệ thuật bấm huyệt cổ đại.', 'EF3500_01_standard.jpg', 10),
+(4, 'GIÀY SOBAKOV 2.0', 700, 350, 'Mẫu giày Sobakov tôn vinh tinh thần bóng đá hiện đại. Mẫu giày bằng vải dệt kim co giãn này có phần dây buộc thiết kế bất đối xứng và đế giữa cao su được chạm khắc cỡ lớn. Để gìn giữ di sản bóng đá của adidas, mẫu giày có những điểm nhấn họa tiết thêu và 3 Sọc đổi hướng phản quang phỏng theo những chi tiết trên đôi Predator Accelerator \'98 huyền thoại.', 'D98155_01_standard.jpg', 4),
+(5, 'GIÀY HUMAN WILLIAMS HU NMD', 1100, 550, 'Thông qua sự kết hợp màu sắc rực rỡ với từ ngữ thể hiện niềm hy vọng và sự bao dung, nhạc sĩ kiêm nhà thiết kế Pharrell Williams muốn tôn vinh những sắc màu nhân văn. Mẫu giày này làm mới phong cách NMD nổi tiếng bằng hình trái tim có chữ \"Human Made\" thêu trên thân giày bằng vải dệt. Đệm đỡ Boost chuyển hồi năng lượng bất tận và tạo sự thoải mái trên mỗi sải bước.', 'EF7223_01_standard.jpg', 1),
+(6, 'GIÀY CAO SU LƯU HÓA CONTINENTAL', 200, 100, 'Lấy cảm hứng từ mẫu giày tập trong nhà vào đầu thập niên 80, Continental 80 mang đến kiểu dáng mới mẻ với phong cách cổ điển. Thân giày trên bằng vải canvas và da khoe ô đặt logo theo phong cách cổ điển ngay cạnh dây giày. Đế giày bằng cao su lưu hóa cho cảm giác cực kỳ vững chân.', 'FV2701_01_standard.jpg', 4);
 
 -- --------------------------------------------------------
 
