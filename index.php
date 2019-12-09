@@ -59,7 +59,7 @@ include_once("model/giay.php"); ?>
 		});
 	</script>
 </head>
-<body>
+<body class="">
 	<?php 
 	include_once("menu.php"); ?>
 	<div class="index-banner">
@@ -159,7 +159,7 @@ include_once("model/giay.php"); ?>
 						<?php $lsGiay = giay::getListDB(); 
 						foreach ($lsGiay as $giay) {
 							?>
-							<div class="col_1_of_3 span_1_of_3"><a href="single.php?mg=<?php echo $giay->IDGiay; ?>">
+							<div class="col_1_of_3 span_1_of_3" style="    background: #fff;"><a href="single.php?mg=<?php echo $giay->IDGiay; ?>">
 								<div class="view view-fifth">
 									<div class="top_box">
 										<h3 class="m_1"><?php echo $giay->tenGIay; ?></h3>

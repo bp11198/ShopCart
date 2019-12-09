@@ -11,7 +11,7 @@
 }
 .thumbnail.thumbnailpost{
 	padding: 0;
-	border-radius: 26px;
+	border-radius: 17px;
 	overflow: hidden;
 }
 h2.text-muted {
@@ -1806,7 +1806,7 @@ span.orange{
 				width:90%;
 			}
 			.logo {
-				margin-right: 30%;
+				margin-right: 25%;
 			}
 			.dropdown {
 				padding-right: 63%;

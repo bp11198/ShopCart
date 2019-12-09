@@ -27,26 +27,7 @@ if(isset($_POST['upload'])){
 	}	
 }
 ?>
-<script src="https://cdn.tiny.cloud/1/5v7kr3ap2016t5vg5xg4f33467br1cx9gdkapcjkkwgw214y/tinymce/5/tinymce.min.js"></script>
-<link rel="stylesheet" type="text/css" href="WYSIWYG/MooEditable/MooEditable.css">
-<link rel="stylesheet" type="text/css" href="WYSIWYG/MooEditable/MooEditable.Charmap.css">
-<script type="text/javascript" src="WYSIWYG/assets/mootools.js"></script>
-<script type="text/javascript" src="WYSIWYG/MooEditable1/MooEditable.js"></script>
-<script type="text/javascript" src="WYSIWYG/MooEditable1/MooEditable.Charmap.js"></script>
-<script type="text/javascript">
-	window.addEvent('domready', function(){
-		var mooeditable = $('textarea-1').mooEditable({
-			actions: 'bold italic underline strikethrough | charmap | toggleview',
-			externalCSS: '../../Assets/MooEditable/Editable.css'
-		});
 
-				// Post submit
-				$('theForm').addEvent('submit', function(e){
-					alert($('textarea-1').value);
-					return true;
-				});
-			});
-		</script>
 		<style type="text/css">
 			body{
 				font-family: sans-serif;
@@ -131,12 +112,11 @@ if(isset($_POST['upload'])){
 						<tr>
 							<td><strong>Post Content : </strong></td>
 
-							<td>
-								<textarea id="textarea-1" name="edit_noidung">
+							<td class="tesa">
+
+								<textarea class="quilljs-textarea" id="textarea-1" name="edit_noidung">
 									<?php echo $gestingle->NoiDungTin; ?>
 								</textarea>
-
-
 							</td>
 						</tr>
 						<tr>

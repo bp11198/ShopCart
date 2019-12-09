@@ -36,7 +36,8 @@
 <!-- Bootstrap core JavaScript-->
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<!-- <script src="WYSIWYG/assets/mootools.js" type="text/javascript" ></script>
+<script type="text/javascript" src="WYSIWYG/MooEditable1/MooEditable.js"></script> -->
 <!-- Core plugin JavaScript-->
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
@@ -51,7 +52,12 @@
 <script src="js/demo/datatables-demo.js"></script>
 
 <script>tinymce.init({selector:'textarea'});</script>
-
+  <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+<!-- Initialize Quill editor -->
+<script>
+    CKEDITOR.replace( 'editable1' );
+    CKEDITOR.replace( 'edit_noidung' );
+  </script>
 </body>
 
 </html>

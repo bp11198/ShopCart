@@ -14,10 +14,13 @@ if (isset($_POST['search'])) {
 			<ul>
 				<li >
 					<div class="d-flex" style="border: 1px solid aquamarine;
-					border-radius: 10px;
-					padding: 2px 18px;">
+    border-radius: 10px;
+    height: 30px;
+    z-index: 1000;
+    padding: 2px 18px;">
 					<i class="fas fa-search" aria-hidden="true"></i>
-					<input class="form-control form-control-sm ml-3 w-75" id="search_live" type="text" placeholder="Search">
+					<input style="height: 20px;
+					border: 0;" class="form-control form-control-sm ml-3 w-75" id="search_live" type="text" placeholder="Search">
 				</div>
 
 				<div class="result">
@@ -29,6 +32,7 @@ if (isset($_POST['search'])) {
 			<li><a href="checkout.php"><i class="fas fa-cart-plus"></i> Bag <span class="text-danger">(<?php if (isset($_SESSION["bag"]) &&count($_SESSION["bag"])!=0) {
 				$listbag=$_SESSION["bag"]; echo count($listbag);
 			}else{echo 'empty';}  ?>)</span></a></li> 
+			
 		</ul>
 	</div>
 	<div class="clear"></div>
@@ -78,10 +82,13 @@ if (isset($_POST['search'])) {
 			}
 			flaq=0
 		});
-
 	});
 </script>
 <style >
+	.dark-mode{
+		background: #987474;
+		color: #FFF;
+	}
 	.result {
 		position: absolute;
 		z-index: 1000;
@@ -132,5 +139,64 @@ if (isset($_POST['search'])) {
 	}
 	li.d-block.search_live:hover  a{
 		font-size: 15px;
+	}
+	.switch {
+		position: relative;
+		display: inline-block;
+		width: 60px;
+		height: 34px;
+	}
+
+	.switch input { 
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 26px;
+		width: 26px;
+		left: 4px;
+		bottom: 4px;
+		background-color: white;
+		-webkit-transition: .4s;
+		transition: .4s;
+	}
+
+	input:checked + .slider {
+		background-color: #000;
+	}
+
+	input:focus + .slider {
+		box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked + .slider:before {
+		-webkit-transform: translateX(26px);
+		-ms-transform: translateX(26px);
+		transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+		border-radius: 34px;
+	}
+
+	.slider.round:before {
+		border-radius: 50%;
 	}
 </style>
