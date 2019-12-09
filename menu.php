@@ -96,7 +96,7 @@ if (isset($_POST['search'])) {
 		background: #ffffff;
 		border-radius: 9px;
 		border: 1px solid #dadada;
-		left: 45%;
+		left: 41%;
 		width: 30%;
 		color: dimgrey;
 		margin-top: 6px;

@@ -108,5 +108,6 @@ if (isset($_REQUEST['maSingle'])) {
 		text-align: center;
 		padding-bottom: 16px;
 		color: chocolate;
+		text-transform: capitalize;
 	}
 </style>

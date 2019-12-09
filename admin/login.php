@@ -132,7 +132,11 @@
 	}
 	elseif(isset($_SESSION["login"])){
 		header('Location: index.php');
-	} ?>
+	} 
+	if (isset($_REQUEST["logout"])) {
+		unset($_SESSION["login"]);
+	}
+	?>
 	
 	<body>
 		<div id="formWrapper">
